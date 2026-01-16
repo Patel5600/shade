@@ -1,116 +1,271 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="SHADE - Artist Studio & Handmade Book Store. A minimal, artistic space for handcrafted books and premium art." />
-    <title>SHADE | Artist Studio & Handmade Books</title>
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div class="noise-overlay"></div>
-    
-    <nav class="main-nav">
-      <div class="logo">SHADE</div>
-      <div class="nav-links">
-        <a href="#studio">Studio</a>
-        <a href="#collection">Collection</a>
-        <a href="#contact">Contact</a>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="SHADE - Artist Studio & Handmade Book Store. A minimal, artistic space for handcrafted books and premium art." />
+  <title>SHADE | Artist Studio & Handmade Books</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=Nanum+Brush+Script&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="noise-overlay"></div>
+  <canvas id="pencil-canvas"></canvas>
+
+  <nav class="main-nav">
+    <div class="logo">SHADE</div>
+    <div class="nav-links">
+      <a href="#studio">Studio</a>
+      <a href="#collection">Collection</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main id="app">
+    <section class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">SHADE</h1>
+        <p class="hero-subtitle">Handcrafted Books for Artists</p>
+        <p class="hero-description">Premium handmade sketchbooks, journals, and art books crafted with precision and
+          soul.</p>
+        <a href="#collection" class="btn-cta">Explore Handmade Books</a>
       </div>
-    </nav>
+      <div class="scroll-indicator">
+        <span>Explore</span>
+        <div class="line"></div>
+      </div>
+    </section>
 
-    <main id="app">
-      <section class="hero-section">
-        <div class="hero-content">
-          <h1 class="hero-title">
-            <span class="reveal-text">Art.</span>
-            <span class="reveal-text">Craft.</span>
-            <span class="reveal-text">Silence.</span>
-          </h1>
-          <p class="hero-subtitle">Premium handmade books & artistic artifacts.</p>
-        </div>
-        <div class="scroll-indicator">
-          <span>Explore</span>
-          <div class="line"></div>
-        </div>
-      </section>
-
-      <section id="studio" class="section studio-section">
-        <div class="container flow-text">
-          <h2 class="section-title">The Studio</h2>
-          <p>We believe in the tangible weight of words. Situated in a quiet corner of the world, SHADE is a sanctuary for the printed medium.</p>
-          <p>Every book is bound by hand, every paper selected for its texture, every ink mixed for its depth. We merge traditional craftsmanship with modern minimalist aesthetics to create objects that demand to be held.</p>
-        </div>
-      </section>
-
-      <section id="collection" class="section collection-section">
-        <div class="container">
-          <h2 class="section-title">Curated Collection</h2>
-          <div class="grid gallery-grid">
-            <div class="card">
-              <div class="card-image placeholder-image" data-color="#e0ded8"></div>
-              <div class="card-info">
-                <h3>Vessel No. 1</h3>
-                <p>Japanese Washi & Ink</p>
-              </div>
+    <section id="studio" class="section studio-section">
+      <div class="container">
+        <div class="studio-grid">
+          <div class="studio-content flow-text">
+            <h2 class="section-title">Inside the SHADE Studio</h2>
+            <p class="section-description">Every book is crafted by hand in our studio using traditional binding
+              techniques and carefully selected materials.</p>
+            <p>From the precise alignment of the press machines to the careful selection of paper stacks, every step is
+              deliberate.</p>
+            <a href="#contact" class="btn-cta">Book a Studio Visit</a>
+          </div>
+          <div class="studio-collage">
+            <div class="collage-item main" data-speed="1">
+              <div class="placeholder-image" data-color="#dcd6ce"></div>
             </div>
-            <div class="card">
-              <div class="card-image placeholder-image" data-color="#d6d2c4"></div>
-              <div class="card-info">
-                <h3>Silence in Form</h3>
-                <p>Limited Edition Binding</p>
-              </div>
+            <div class="collage-item detail-1" data-speed="1.2">
+              <div class="placeholder-image" data-color="#e6ded3"></div>
             </div>
-            <div class="card">
-              <div class="card-image placeholder-image" data-color="#cfcdc6"></div>
-              <div class="card-info">
-                <h3>The Grey Series</h3>
-                <p>Graphite on Cotton Paper</p>
-              </div>
-            </div>
-             <div class="card">
-              <div class="card-image placeholder-image" data-color="#e0ded8"></div>
-              <div class="card-info">
-                <h3>Vessel No. 2</h3>
-                <p>Charcoal & Linen</p>
-              </div>
-            </div>
-             <div class="card">
-              <div class="card-image placeholder-image" data-color="#d6d2c4"></div>
-              <div class="card-info">
-                <h3>Echoes</h3>
-                <p>Hand-stitched Journal</p>
-              </div>
-            </div>
-             <div class="card">
-              <div class="card-image placeholder-image" data-color="#cfcdc6"></div>
-              <div class="card-info">
-                <h3>Structure</h3>
-                <p>Architectural Sketches</p>
-              </div>
+            <div class="collage-item detail-2" data-speed="0.8">
+              <div class="placeholder-image" data-color="#c8a85a"></div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="contact" class="section contact-section">
-        <div class="container">
-           <h2 class="section-title">Visit Us</h2>
-           <p class="contact-text">Open by appointment only.</p>
-           <a href="mailto:hello@shade.studio" class="email-link">hello@shade.studio</a>
-           
-           <footer class="footer">
-             <p>&copy; 2026 SHADE Studio. All rights reserved.</p>
-           </footer>
+    <section id="collection" class="section collection-section">
+      <div class="container">
+        <h2 class="section-title">Handmade Collection</h2>
+        <div class="grid gallery-grid">
+          <div class="card">
+            <div class="card-image placeholder-image" data-color="#e0ded8"></div>
+            <div class="card-info">
+              <h3>Sketchbooks</h3>
+              <p>Premium Heavyweight Paper</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image placeholder-image" data-color="#d6d2c4"></div>
+            <div class="card-info">
+              <h3>Journals</h3>
+              <p>Hand-stitched Defines</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image placeholder-image" data-color="#cfcdc6"></div>
+            <div class="card-info">
+              <h3>Calligraphy Books</h3>
+              <p>Smooth, Bleed-proof Pages</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image placeholder-image" data-color="#e0ded8"></div>
+            <div class="card-info">
+              <h3>Custom Artist Books</h3>
+              <p>Bespoke Commissioned Works</p>
+            </div>
+          </div>
         </div>
-      </section>
-    </main>
-    
-    <script type="module" src="/src/main.js"></script>
-  </body>
+      </div>
+    </section>
+
+    <section id="supplies" class="section supplies-section">
+      <div class="container">
+        <h2 class="section-title">Art Supplies</h2>
+        <p class="section-description">Complete range of professional art materials sourced from trusted manufacturers.
+        </p>
+        <div class="grid gallery-grid">
+          <div class="card">
+            <div class="card-image placeholder-image" data-color="#e0ded8"></div>
+            <div class="card-info">
+              <h3>Graphite Set</h3>
+              <p>Professional Grade</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image placeholder-image" data-color="#d6d2c4"></div>
+            <div class="card-info">
+              <h3>Sumi Ink</h3>
+              <p>Traditional Black</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image placeholder-image" data-color="#cfcdc6"></div>
+            <div class="card-info">
+              <h3>Bamboo Brushes</h3>
+              <p>Natural Bristles</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image placeholder-image" data-color="#e0ded8"></div>
+            <div class="card-info">
+              <h3>Cotton Paper</h3>
+              <p>100% Cotton Rag</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="custom-studio" class="section custom-studio-section">
+      <div class="container">
+        <h2 class="section-title">Custom Studio</h2>
+        <p class="section-description">Design your bespoke book in our digital workshop.</p>
+
+        <div class="studio-workshop-grid">
+          <!-- Workshop Form -->
+          <div class="workshop-form-container">
+            <h3>Specification Sheet</h3>
+            <form class="custom-book-form">
+              <div class="form-group">
+                <label for="size">Size</label>
+                <select id="size" name="size">
+                  <option value="a5">A5 (Standard)</option>
+                  <option value="a4">A4 (Large)</option>
+                  <option value="pocket">Pocket Journal</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="paper">Paper Type</label>
+                <select id="paper" name="paper">
+                  <option value="cotton">Cotton Rag (150gsm)</option>
+                  <option value="cold-press">Cold Press Watercolor</option>
+                  <option value="cream-laid">Cream Laid</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="binding">Binding Style</label>
+                <select id="binding" name="binding">
+                  <option value="coptic">Coptic Stitch</option>
+                  <option value="perfect">Perfect Bound</option>
+                  <option value="japanese">Japanese Stab Binding</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="cover">Cover Material</label>
+                <select id="cover" name="cover">
+                  <option value="linen">Linen Cloth</option>
+                  <option value="canvas">Raw Canvas</option>
+                  <option value="leather">Leather</option>
+                </select>
+              </div>
+
+              <button type="button" class="btn-cta">Request Quote</button>
+            </form>
+          </div>
+
+          <!-- Preview -->
+          <div class="workshop-preview-container">
+            <div class="book-mockup">
+              <!-- Visual representation handled by CSS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section testimonials-section">
+      <div class="container">
+        <h2 class="section-title">Artists Who Trust SHADE</h2>
+        <div class="testimonial-grid">
+          <!-- Card 1: Minimal -->
+          <div class="testimonial-card frame-minimal">
+            <p class="testimonial-quote">"The paper quality is exceptional. Perfect for ink and watercolor."</p>
+            <h4 class="testimonial-author">Professional Illustrator</h4>
+          </div>
+
+          <!-- Card 2: Ink -->
+          <div class="testimonial-card frame-ink">
+            <p class="testimonial-quote">"Finally a handmade book that feels premium and durable."</p>
+            <h4 class="testimonial-author">Calligraphy Artist</h4>
+          </div>
+
+          <!-- Card 3: Sketch -->
+          <div class="testimonial-card frame-sketch">
+            <p class="testimonial-quote">"The binding is solid. This is built for real artists."</p>
+            <h4 class="testimonial-author">Sketch Artist</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact" class="footer-signature-wall">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand Signature -->
+          <div class="brand-signature">
+            <h2>Shade</h2>
+          </div>
+
+          <!-- Contact & Social -->
+          <div class="footer-info">
+            <div class="footer-contact">
+              <h4>Visit Us</h4>
+              <p>By Appointment Only</p>
+              <a href="mailto:hello@shade.studio" class="email-link" style="font-size: 1.5rem;">hello@shade.studio</a>
+            </div>
+
+            <div class="footer-social">
+              <h4>Connect</h4>
+              <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">Pinterest</a>
+              </div>
+            </div>
+
+            <div class="copyright">
+              <p>&copy; 2026 SHADE Studio. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
